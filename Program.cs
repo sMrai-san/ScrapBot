@@ -13,29 +13,37 @@ namespace AMDScrapBot
             // Initialize the Chrome Driver
             using (var driver = new ChromeDriver())
             {
-                //SEARCH STRING VARIABLE HERE
-                string searchProduct = "6600";
+                //Website
+                string siteToScrap = "https://www.amd.com/en/direct-buy/fi";
 
-                //Variable to write if the product is found
-                bool productFound = false;
+                //Search 'container' (check code for By.Id() / By.ClassName())
+                string searchFrom = "direct-buy";
+
+                //Search string
+                string searchParam = "6600";
+
                 //Wait until page is loaded (3s should be enough)
                 int pageLoadWaitSec = 3;
 
+                //Variable to write if the product is found
+                bool productFound = false;
+
                 // Go to the AMD directbuy page
                 driver.Manage().Window.Minimize();
-                driver.Navigate().GoToUrl("https://www.amd.com/en/direct-buy/fi");
+                driver.Navigate().GoToUrl(siteToScrap);
 
                 //Wait for the page to load
                 Thread.Sleep(pageLoadWaitSec * 1000);
 
                 //Get text from products available
-                var result = driver.FindElements(By.ClassName("direct-buy"));
+                var result = driver.FindElements(By.ClassName(searchFrom));
+                //var result = driver.FindElements(By.Id("direct-buy"));
 
                 //Loop the page content!
                 foreach (var i in result)
                 {
                     //If there is specific product leave console open else shutdown console:
-                    if (i.Text.Contains(searchProduct))
+                    if (i.Text.Contains(searchParam))
                     {
                         Console.Clear();
                         Console.WriteLine("***************************************************************************");
@@ -79,7 +87,7 @@ namespace AMDScrapBot
                 //not found
                 if (!productFound)
                 {
-                    Console.WriteLine("The product " + searchProduct + " was not found!");
+                    Console.WriteLine("The product " + searchParam + " was not found!");
                     Console.WriteLine("Searched site: https://www.amd.com/en/direct-buy/fi");
                 }
             }

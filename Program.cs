@@ -13,23 +13,25 @@ namespace AMDScrapBot
             // Initialize the Chrome Driver
             using (var driver = new ChromeDriver())
             {
-                //********************************
-                //SEARCH STRING HERE
-                //********************************
+                //SEARCH STRING VARIABLE HERE
                 string searchProduct = "6600";
+
+                //Variable to write if the product is found
                 bool productFound = false;
+                //Wait until page is loaded (3s should be enough)
+                int pageLoadWaitSec = 3;
 
                 // Go to the AMD directbuy page
                 driver.Manage().Window.Minimize();
                 driver.Navigate().GoToUrl("https://www.amd.com/en/direct-buy/fi");
 
-                //Wait until page is loaded (3s should be enough)
-                Thread.Sleep(3000);
+                //Wait for the page to load
+                Thread.Sleep(pageLoadWaitSec * 1000);
 
                 //Get text from products available
                 var result = driver.FindElements(By.ClassName("direct-buy"));
 
-                //Loop the page!
+                //Loop the page content!
                 foreach (var i in result)
                 {
                     //If there is specific product leave console open else shutdown console:

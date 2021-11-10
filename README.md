@@ -7,7 +7,7 @@
 	<li><a href="https://chromedriver.chromium.org/downloads">ChromeDriver</a></li>
 	
 </ul>
-<div>
+</div>
 
 <div>
 <h2>What it does?</h2>

@@ -33,9 +33,9 @@
 <div>
 <h2>Screenshots</h2>
 <p>
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/55156353@N07/51669702016/in/dateposted-public/" title="opening"><img src="https://live.staticflickr.com/65535/51669702016_e45cfdeec6_b.jpg" width="979" height="512" alt="opening"></a>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/55156353@N07/51669702016/in/dateposted-public/" title="opening"><img src="https://live.staticflickr.com/65535/51669702016_210955c024_b.jpg" width="979" height="512" alt="opening"></a>
 </p>
 <p>
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/55156353@N07/51668905197/in/dateposted-public/" title="isFound"><img src="https://live.staticflickr.com/65535/51668905197_e62cded6f8_b.jpg" width="979" height="512" alt="isFound"></a>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/55156353@N07/51668905197/in/dateposted-public/" title="isFound"><img src="https://live.staticflickr.com/65535/51668905197_fec58f47a4_b.jpg" width="979" height="512" alt="isFound"></a>
 </p>
 </div>
